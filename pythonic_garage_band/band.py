@@ -1,10 +1,10 @@
 class Band:
-    count = 0
+    instances = []
 
     def __init__(self, name, members=None):
         self.name = name
         self.members = members
-        Band.count += 1
+        Band.instances.append(self.name)
 
     def __str__(self):
         return f"The band {self.name}"
@@ -19,13 +19,16 @@ class Band:
 
     @classmethod
     def to_list(cls):
-        return cls.count
+        return cls.instances
 
 
         
 class Musician:
     def play_solo(self):
-        return ""
+        return "play your instrument"
+
+    def get_instrument(self):
+        return "instrument"
 
         
 class Guitarist(Musician):
