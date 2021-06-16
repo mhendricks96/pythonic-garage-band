@@ -1,7 +1,7 @@
 from pythonic_garage_band import __version__
 import json
 import pytest
-import yaml
+#import yaml
 
 
 def test_version():
@@ -27,7 +27,7 @@ def test_band_repr():
     expected = "Band instance. name=Nirvana, members=[]"
     assert actual == expected
 
-@pytest.mark.skip("pending")
+#@pytest.mark.skip("pending")
 def test_guitarist_str():
     joan = Guitarist("Joan Jett")
     actual = str(joan)
@@ -35,7 +35,7 @@ def test_guitarist_str():
     assert actual == expected
 
 
-@pytest.mark.skip("pending")
+#@pytest.mark.skip("pending")
 def test_guitarist_repr():
     joan = Guitarist("Joan Jett")
     actual = repr(joan)
@@ -43,7 +43,7 @@ def test_guitarist_repr():
     assert actual == expected
 
 
-@pytest.mark.skip("pending")
+#@pytest.mark.skip("pending")
 def test_drummer_str():
     sheila = Drummer("Sheila E.")
     actual = str(sheila)
