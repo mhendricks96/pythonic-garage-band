@@ -1,7 +1,7 @@
 from pythonic_garage_band import __version__
 import json
 import pytest
-#import yaml
+import yaml
 
 
 def test_version():
@@ -191,7 +191,7 @@ def clean():
 #######################
 
 
-@pytest.mark.skip("stretch")
+#@pytest.mark.skip("stretch")
 def test_from_file():
     with open("assets/bands.json") as f:
         bands = json.loads(f.read())
@@ -205,7 +205,7 @@ def test_from_file():
     assert nirvana.name == "Nirvana"
 
 
-@pytest.mark.skip("stretch")
+#@pytest.mark.skip("stretch")
 def test_from_yaml():
     bands = yaml.safe_load(open("assets/bands.yml"))
 
@@ -214,7 +214,7 @@ def test_from_yaml():
     assert bands[1]["name"] == "The Pixies"
 
 
-@pytest.mark.skip("stretch")
+#@pytest.mark.skip("stretch")
 def test_abstract_musician():
     with pytest.raises(TypeError):
         unacceptably_vague_musician = Musician()

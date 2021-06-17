@@ -1,4 +1,7 @@
-class Band:
+
+from abc import ABC, abstractmethod
+
+class Band():
     instances = []
 
     def __init__(self, name, members=None):
@@ -23,12 +26,15 @@ class Band:
 
 
         
-class Musician:
+class Musician(ABC):
+    
+    @abstractmethod
     def play_solo(self):
-        return "play your instrument"
+        pass
 
+    @abstractmethod
     def get_instrument(self):
-        return "instrument"
+        pass
 
         
 class Guitarist(Musician):
